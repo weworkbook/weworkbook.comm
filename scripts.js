@@ -1,20 +1,26 @@
-// scripts.js - minimal interactions for the offline demo
-document.addEventListener('DOMContentLoaded', function(){
-  var viewLink = document.getElementById('viewCertLink');
-  viewLink.addEventListener('click', function(e){
-    e.preventDefault();
-    alert('This is a placeholder link in the offline package.');
-  });
+document.addEventListener('DOMContentLoaded', function () {
+  var hamburger = document.getElementById('hamburger');
+  var menu = document.getElementById('menu');
+  if (hamburger) {
+    hamburger.addEventListener('click', function () {
+      if (menu.classList.contains('d-none')) {
+        menu.classList.remove('d-none');
+        menu.classList.add('d-block');
+      } else {
+        menu.classList.remove('d-block');
+        menu.classList.add('d-none');
+      }
+    });
+  }
 });
-
-function showTimeZone(){
-  try{
+function showTimeZone() {
+  try {
+    var tzInput = document.getElementById('timezone');
     var tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
-    var tzInput = document.getElementById('timezone');
-    if(tzInput) tzInput.value = tz;
-  } catch(e){
-    var tzInput = document.getElementById('timezone');
-    if(tzInput) tzInput.value = 'UTC offset ' + new Date().getTimezoneOffset();
+    if (tzInput) tzInput.value = tz;
+  } catch (e) {
+    var offset = new Date().getTimezoneOffset();
+    if (tzInput) tzInput.value = 'UTC offset ' + offset;
   }
   return true;
 }
