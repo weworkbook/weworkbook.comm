@@ -1,11 +1,13 @@
-Weworkbook Certificate Verification Demo
------------------------------------------
-Files:
+Offline Weworkbook Certificate Verification Demo
+Files included:
 - index.html
 - styles.css
 - scripts.js
+- images/logo.svg
+- images/banner.svg
+- images/certificate-placeholder.svg
 
 How to use:
-1. Put all files in one folder.
-2. Open index.html in any modern web browser.
-3. Requires internet access to load Bootstrap and Font Awesome CDNs.
+1. Download and unzip the package.
+2. Open index.html in your browser (works offline).
+3. All images are SVG placeholders matching the site's color scheme.

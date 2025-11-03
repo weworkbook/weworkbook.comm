@@ -2,82 +2,117 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-  <title>Weworkbook - Certificate Verification</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" crossorigin="anonymous"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous"/>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Weworkbook - Certificate Verification (Offline)</title>
+
+  <!-- Bootstrap 5 (local via CDN is okay offline? We'll keep CDN links but page will still work visually) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <header class="pt-3 pb-3 border-bottom">
-    <div class="container-fluid">
-      <div class="row align-items-center">
-        <div class="col-3"><a href="https://www.weworkbook.com/login.php" class="text-decoration-none">Login</a></div>
-        <div class="col-6 text-center">
-          <h1 class="logo mb-0"><a href="https://www.weworkbook.com/" class="text-dark text-decoration-none">Weworkbook</a></h1>
-        </div>
-        <div class="col-3 text-right">
-          <button id="hamburger" class="btn btn-outline-secondary d-md-none" aria-label="Toggle menu">
-            <i class="fa fa-bars"></i>
-          </button>
+<body class="bg-light">
+  <header class="py-3 border-bottom bg-white">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <a href="#" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+        <img src="images/logo.svg" alt="Weworkbook" height="48">
+      </a>
+
+      <ul class="nav col-12 col-lg-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
+        <li><a href="#" class="nav-link px-2 link-secondary">Training Companies</a></li>
+        <li><a href="#" class="nav-link px-2 link-secondary">Consultants</a></li>
+        <li><a href="#" class="nav-link px-2 link-secondary">Blog</a></li>
+      </ul>
+
+      <div class="d-flex">
+        <a href="#" class="btn btn-outline-primary me-2">Login</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container py-5">
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="banner rounded-3 overflow-hidden">
+          <img src="images/banner.svg" alt="banner" class="w-100" style="display:block;">
         </div>
       </div>
     </div>
-    <nav id="menu" class="container-fluid d-none d-md-block mt-3">
-      <div class="row">
-        <div class="col text-right">
-          <p class="lead mb-1"><a href="https://www.weworkbook.com/">Home</a></p>
-          <p class="lead mb-1"><a href="https://www.weworkbook.com/training-company.php">Training Companies</a></p>
-          <p class="lead mb-1"><a href="https://www.weworkbook.com/consultant.php">Consultants</a></p>
-          <p class="lead mb-1"><a href="https://www.weworkbook.com/testimonials.php">Testimonials</a></p>
-          <p class="lead mb-1"><a href="https://www.weworkbook.com/one-minute-snapshots.php">One Minute Snapshots</a></p>
-          <p class="lead mb-1"><a href="https://www.weworkbook.com/blog.php">Blog</a></p>
-          <p class="lead mb-1"><a href="https://www.weworkbook.com/login.php">Login</a></p>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <main class="py-5">
-    <section id="certDetails">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <div class="term-title mb-3"><h2>Certificate Details</h2></div>
-            <div class="term-conditionContent card card-body">
-              <p><strong>Issuing Organisation:</strong> International Institute of Education and Training</p>
-              <p><strong>Certificate Number:</strong> IIET141919</p>
-              <p><strong>Student Name:</strong> KELVIN KIPLAGAT</p>
-              <p><strong>Course:</strong> CHC43115 - Certificate IV in Disability</p>
-              <p class="mt-3">Click <a target="_blank" rel="noopener" href="https://drive.google.com/file/d/1OWgi3aewH0Kjprkz-Vegcza-mWz6xybf/view?usp=sharing">here</a> to view the certificate.</p>
+
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="card shadow-sm mb-4">
+          <div class="card-body">
+            <h3 class="card-title mb-3">Certificate Verification</h3>
+            <div class="d-flex align-items-center mb-3">
+              <img src="images/certificate-placeholder.svg" alt="certificate" class="me-3" style="width:140px;height:auto;">
+              <div>
+                <p class="mb-1"><strong>Issuing Organisation:</strong> International Institute of Education and Training</p>
+                <p class="mb-1"><strong>Certificate Number:</strong> IIET141919</p>
+                <p class="mb-1"><strong>Student Name:</strong> KELVIN KIPLAGAT</p>
+                <p class="mb-0"><strong>Course:</strong> CHC43115 - Certificate IV in Disability</p>
+              </div>
             </div>
+
+            <p>View the certificate: <a href="#" id="viewCertLink">Open certificate (placeholder)</a></p>
+          </div>
+        </div>
+
+        <div class="card shadow-sm mb-4">
+          <div class="card-body">
+            <h5>About this verification</h5>
+            <p class="mb-0">This offline package recreates the look and feel of the original Weworkbook certificate verification page with placeholder images and the site's color scheme for local testing and previews.</p>
           </div>
         </div>
       </div>
-    </section>
+
+      <aside class="col-lg-4">
+        <div class="card shadow-sm mb-4">
+          <div class="card-body">
+            <h5 class="mb-3">User Login</h5>
+            <form id="login_form" action="#" onsubmit="return showTimeZone();">
+              <div class="mb-2">
+                <input class="form-control" placeholder="Username" name="email" required>
+              </div>
+              <div class="mb-2">
+                <input type="password" class="form-control" placeholder="Password" name="password" required>
+              </div>
+              <input type="hidden" id="timezone" name="timezone">
+              <div class="d-grid">
+                <button class="btn btn-primary" type="submit">Sign in</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="card shadow-sm">
+          <div class="card-body text-center">
+            <p class="mb-1">Color Palette</p>
+            <div class="palette d-flex gap-2 justify-content-center">
+              <div class="swatch" style="background:var(--wb-primary)"></div>
+              <div class="swatch" style="background:var(--wb-accent)"></div>
+              <div class="swatch" style="background:var(--wb-muted)"></div>
+              <div class="swatch" style="background:var(--wb-dark)"></div>
+            </div>
+            <small class="text-muted d-block mt-2">CSS variables in <code>styles.css</code></small>
+          </div>
+        </div>
+      </aside>
+    </div>
   </main>
-  <footer class="bg-dark text-white pt-4 pb-4">
+
+  <footer class="py-4 bg-dark text-white mt-auto">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 mb-3">
-          <h4>USER LOGIN</h4>
-          <form id="login_form" name="login_form" method="post" action="https://www.weworkbook.com/user/login.php" onsubmit="return showTimeZone();">
-            <div class="form-row align-items-center">
-              <div class="col-lg-6 col-10"><input type="text" class="form-control mb-2" placeholder="Username" name="email" required></div>
-              <div class="col-lg-6 col-10"><input type="password" class="form-control mb-2" placeholder="Password" name="password" required></div>
-              <div class="col-2"><button type="submit" class="btn btn-primary"><i class="fa fa-chevron-right"></i></button></div>
-            </div>
-            <div class="form-row">
-              <small class="form-text text-muted mb-2"><a href="https://www.weworkbook.com/forgetpassword.php" target="_blank" class="text-white-50">Forgot Password</a></small>
-              <input type="hidden" name="timezone" id="timezone">
-            </div>
-          </form>
+        <div class="col-md-6">
+          <p class="mb-0">&copy; Weworkbook - Offline Demo</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <small class="text-muted">Designed to match original colors and layout.</small>
         </div>
       </div>
     </div>
   </footer>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
   <script src="scripts.js"></script>
 </body>
 </html>

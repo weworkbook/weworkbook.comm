@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="300" viewBox="0 0 420 300">
+  <rect width="420" height="300" rx="8" fill="#fff" stroke="#e9ecef"/>
+  <rect x="20" y="20" width="380" height="80" rx="6" fill="#f8f9fa"/>
+  <text x="30" y="60" font-family="Segoe UI, Roboto, Arial" font-size="20" fill="#212529">Certificate</text>
+  <text x="30" y="120" font-size="14" fill="#6c757d">Issuing Organisation: International Institute of Education and Training</text>
+  <text x="30" y="150" font-size="14" fill="#6c757d">Certificate No: IIET141919</text>
+  <text x="30" y="180" font-size="14" fill="#6c757d">Student: KELVIN KIPLAGAT</text>
+  <text x="30" y="210" font-size="14" fill="#6c757d">Course: CHC43115 - Certificate IV in Disability</text>
+</svg>
